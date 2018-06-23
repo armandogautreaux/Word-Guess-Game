@@ -4,40 +4,127 @@
 <head>
 
   <meta charset="utf-8">
-  <title>Word-Guess-Game</title>
-  <link rel="stylesheet" href="assets/css/reset.css">
-  <link rel="stylesheet" href="assets/css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Word-Guess-Game</title>
+
+  <!-- MAIN CSS FILES -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 
 <body>
 
-  <!-- MAIN HEADER -->
-  <header class="primary-header group">
+  <!-- MAIN HEADER/GAME-->
+  <header>
+    <div class="container bg-success">
+      <div class="row">
+
+        <!-- Logo starts here -->
+        <div class="col-sm-12 col-md-5 col-lg-4 logo bg-success pt-3">
+          <div class="heading-font text-sm-center text-md-center">
+            <h1 class="text-white font-weight-bold">Word Guess Game</h1>
+            <p class="h4 subtitle">for Kids</p>
+          </div>
+        </div>
+        <!-- Logo ends here-->
+
+        <!-- Score starts here -->
+        <div class="col-sm-12 col-md-7 col-lg-8 ">
+          <nav class="py-4">
+            <div class="text-sm-center text-md-right">
+              <div class="d-inline-block">
+                <p>Letters remaining
+                  <span class="pl-2" id="remainingGuesses"></span>
+                </p>
+              </div>
+              <div class="d-inline-block">
+                <p class="pl-4">Wins
+                  <span class="pl-2" id="gamesWon"></span>
+                </p>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <!-- Score ends here -->
+
+      </div>
+    </div>
   </header>
 
-  <!-- MAIN CONTENT -->
-  <section class="container-main">
-    <div class="main">
 
-      <h1>WORD - GUESS - GAME</h1>
+  <!-- MAIN SECTION-->
+  <section class="main">
+    <div class="container bg-white p-5 border-main">
+      <div class="row">
 
+        <!-- Guess Area starts here-->
+        <div class="col-sm-12 bg-white heading-font title-border text-center py-2">
+          <img src="assets/images/sheep.png" class="img-fluid float-right w-100  mr-4 pb-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+          <h1 class="font-weight-bold pt-5 px-2 mt-5" id="word-space">
+          </h1>
+        </div>
+        <!-- Guess Area ends here-->
+
+        <!-- Message Area starts here -->
+        <div class="col-sm-12 no-gutters text-center">
+          <p class="h4 mt-5" id="startGame">
+            The word is either a Profession Name or an Adjective!!!
+            <br>
+            <br> Press any letter to start.
+          </p>
+          <p class="h2" id="winMessage"></p>
+          <p class="h2" id="loseMessage"></p>
+          <p class="h2" id="invalidLetter"></p>
+        </div>
+        <!-- Message Area starts ends here -->
+
+      </div>
     </div>
-
   </section>
 
-  <!-- MAIN FOOTER -->
-  <footer class="primary-footer group">
-    <div class="container">
 
-
-
+  <!-- MAIN FOOTER/GAME -->
+  <footer class="primary-footer">
+    <div class="container bg-success py-2">
+      <div class="row text-center">
+        <div class="col">
+          <p class="pt-4">
+            Letters already guessed
+          </p>
+          <div class="col">
+            <p id="guessedLetters" class="h5 guessed"> 0
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </footer>
 
+  <!--FIXED FOOTER-->
+  <section class="bg-primary fixed-bottom text-center">
+    <p class="pt-1">
+      <small>Copyright &copy;
+        <span id="year"></span>
+      </small>
+    </p>
+  </section>
 
-  <script type="text/javascript" src="assets/javascript/game.js"></script>
+
+
+  <!-- JS -->
+  <script src=" http://code.jquery.com/jquery-3.3.1.min.js " integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin=" anonymous "></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 "
+    crossorigin="anonymous "></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js " integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T "
+    crossorigin="anonymous "></script>
+  <script type="text/javascript " src="assets/javascript/game.js "></script>
+
 </body>
 
 </html>
